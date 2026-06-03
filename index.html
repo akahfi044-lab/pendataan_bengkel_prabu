@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup Sistem Informasi Bengkel Prabu</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .section { border: 2px solid #ccc; padding: 20px; margin-bottom: 30px; border-radius: 5px; }
+        .developer-zone { border-color: #ff9999; background-color: #fff5f5; }
+        .client-zone { border-color: #99ccff; background-color: #f5f9ff; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .status-badge { font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+
+    <h1>Mockup Tampilan Sistem Bengkel Prabu (HTML Statis)</h1>
+    <p><em>Catatan: Karena ini adalah HTML murni tanpa PHP/Database, tombol-tombol di bawah hanya pemanis dan tidak memproses data.</em></p>
+
+    <div class="section">
+        <h2>[TAMPILAN] Login Pengaruh Sistem</h2>
+        <form action="#" method="GET">
+            <input type="text" placeholder="Username" required><br><br>
+            <input type="password" placeholder="Password" required><br><br>
+            <button type="button" onclick="alert('Ini hanya HTML statis. Fitur login memerlukan PHP.')">Login</button>
+        </form>
+        <p>Belum punya akun? <a href="#register">Daftar di sini</a></p>
+    </div>
+
+    <div id="register" class="section">
+        <h2>[TAMPILAN] Pendaftaran Akun</h2>
+        <form action="#" method="GET">
+            <input type="text" placeholder="Username" required><br><br>
+            <input type="password" placeholder="Password" required><br><br>
+            <select>
+                <option value="client">Client / Pelanggan</option>
+                <option value="developer">Developer / Owner</option>
+            </select><br><br>
+            <button type="button" onclick="alert('Ini hanya HTML statis. Fitur registrasi memerlukan PHP.')">Daftar</button>
+        </form>
+        <p>Sudah punya akun? <a href="#">Login di sini</a></p>
+    </div>
+
+    <div class="section client-zone">
+        <h2>[TAMPILAN] Selamat Datang, Client: Ahmad! (<a href="#">Logout</a>)</h2>
+        <hr>
+        
+        <h3>Form Pendaftaran Servis Bengkel</h3>
+        <form action="#" method="GET">
+            <input type="text" placeholder="Nama Anda" value="Ahmad" required><br><br>
+            <input type="text" placeholder="No HP" required><br><br>
+            <input type="text" placeholder="Plat Nomor Kendaraan" required><br><br>
+            <textarea placeholder="Keluhan Kerusakan/Service" rows="4" cols="30"></textarea><br><br>
+            <button type="button" onclick="alert('Pendaftaran tiruan berhasil! (Data tidak disimpan ke database)')">Daftar Servis</button>
+        </form>
+
+        <hr>
+        <h3>Daftar Stok & Harga Sparepart</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Barang</th>
+                    <th>Stok Tersedia</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Oli Mesin Matic</td>
+                    <td>15</td>
+                    <td>Rp 65.000</td>
+                </tr>
+                <tr>
+                    <td>Kampas Rem Depan</td>
+                    <td>8</td>
+                    <td>Rp 45.000</td>
+                </tr>
+                <tr>
+                    <td>Busi Standar</td>
+                    <td>20</td>
+                    <td>Rp 25.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section developer-zone">
+        <h2>[TAMPILAN] Sistem Developer/Owner Bengkel (<a href="#">Logout</a>)</h2>
+        <hr>
+        
+        <h3>1. Manajemen Stok & Harga Barang</h3>
+        <form action="#" method="GET">
+            <input type="text" placeholder="Nama Sparepart" required>
+            <input type="number" placeholder="Stok" required>
+            <input type="number" placeholder="Harga" required>
+            <button type="button" onclick="alert('Barang tiruan berhasil ditambahkan!')">Tambah Barang</button>
+        </form>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Barang</th>
+                    <th>Stok</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Oli Mesin Matic</td>
+                    <td>15</td>
+                    <td>Rp 65.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kampas Rem Depan</td>
+                    <td>8</td>
+                    <td>Rp 45.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+        <h3>2. Data Pendaftaran Servis Masuk (Client)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Plat</th>
+                    <th>Keluhan</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ahmad</td>
+                    <td>B 1234 ABC</td>
+                    <td>Ganti Oli & Rem Bunyi</td>
+                    <td><b>Antre</b></td>
+                    <td><a href="#" onclick="alert('Client dengan nama Ahmad dan plat B 1234 ABC telah sukses diperbaiki')">Set Selesai</a></td>
+                </tr>
+                <tr>
+                    <td>Rian</td>
+                    <td>D 9999 XYZ</td>
+                    <td>Turun Mesin</td>
+                    <td><span class="status-badge">Selesai</span></td>
+                    <td><span class="status-badge">✔ Teratasi</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
